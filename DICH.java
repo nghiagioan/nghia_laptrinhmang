@@ -11,10 +11,7 @@ import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author USER
- */
+
 public class DICH extends Thread{
     Socket socketClient;
     int id = -1;
@@ -87,7 +84,7 @@ public class DICH extends Thread{
                 String chuoiGui = chuoiNhan;
                 buffWrite.write(chuoiGui+"\n");
                 buffWrite.flush();
-                if (chuoiGui.equals("bye")) break;
+                if (chuoiGui.equals("10")) break;
             }
             socketClient.close();
         } catch (IOException ex) {
